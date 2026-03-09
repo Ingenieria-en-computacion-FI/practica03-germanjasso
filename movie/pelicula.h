@@ -5,7 +5,7 @@
 
 typedef struct Pelicula Pelicula;
 
-Pelicula* crearPelicula(const char* titulo, int año, const char* genero);
+Pelicula* crearPelicula(const char* titulo, int anio, const char* genero);
 
 void imprimir(Pelicula* p);
 
