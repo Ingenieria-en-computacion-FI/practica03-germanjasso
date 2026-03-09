@@ -1,57 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "nodo.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-/* TODO
-   Definir la estructura Nodo.
-   Debe contener un entero llamado valor.
-*/
-struct Nodo
-{
-    /* TODO */
-};
-
-
-/* Crear un nodo dinámicamente */
-Nodo* crearNodo(int valor)
-{
-    /* TODO
-       1 Reservar memoria con malloc
-       2 Verificar que la memoria se haya asignado
-       3 Inicializar el valor del nodo
-       4 Regresar el nodo
-    */
-
-    return NULL;
+Nodo *crearNodo (int valor){
+    Nodo *n = (Nodo*)malloc(sizeof(Nodo));
+    n->valor =valor;
+    return n;
 }
-
-
-/* Obtener el valor almacenado */
-int obtenerValor(Nodo* nodo)
-{
-    /* TODO
-       1 Verificar que el nodo no sea NULL
-       2 Regresar el valor almacenado
-    */
-
-    return 0;
+int obtenerValor (const Nodo *n){
+    return n->valor;
 }
-
-
-/* Modificar el valor almacenado */
-void asignarValor(Nodo* nodo, int valor)
-{
-    /* TODO
-       1 Verificar que el nodo no sea NULL
-       2 Asignar el nuevo valor
-    */
+void asignarValor(Nodo *n, int v){
+    if(!n) return;
+    n->valor= v;
 }
-
-
-/* Liberar memoria del nodo */
-void destruirNodo(Nodo* nodo)
-{
-    /* TODO
-       Liberar la memoria usando free
-    */
+void destruirNodo(Nodo *n){
+    if(!n) return;
+    free (n);
 }
