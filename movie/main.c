@@ -3,40 +3,23 @@
 
 int main()
 {
-
     printf("Prueba del TAD Pelicula\n");
 
-    /* TODO
-       Crear una película
-    */
-    Pelicula* p = NULL;
+    Pelicula* p = crearPelicula("Oppenheimer", 2023, "Drama");
 
+    agregarDirector(p, "Christopher Nolan");
+    agregarDirector(p, "Emma Thomas");
 
-    /* TODO
-       Agregar algunos directores
-    */
-
-
-    /* TODO
-       Imprimir película
-    */
-
+    imprimir(p);
 
     printf("\nCambiar genero\n");
 
-    /* TODO
-       Cambiar genero
-    */
+    cambiarGenero(p, "Biografico/Historico");
 
+    imprimir(p);
 
-    /* TODO
-       Imprimir nuevamente
-    */
-
-
-    /* TODO
-       Liberar memoria
-    */
+    destruir(p);
+    p = NULL; 
 
     return 0;
 }
