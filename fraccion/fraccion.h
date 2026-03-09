@@ -1,5 +1,5 @@
-#ifndef FRACCION_H
-#define FRACCION_H
+#ifndef __FRACCION_H__
+#define __FRACCION_H__
 
 struct fraccion {
     int num;
